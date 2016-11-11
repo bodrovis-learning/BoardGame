@@ -13,7 +13,7 @@
   height: 40px;
   border: 3px solid #000;
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
 }
 
 .row .cell:hover {
@@ -34,4 +34,29 @@
 
 .row .cell .unit.selected {
   background-color: chartreuse;
+  cursor: default;
+}
+
+.board .row:first-of-type .cell {
+  border-top-width: 6px;
+}
+
+.board .row:last-of-type .cell {
+  border-bottom-width: 6px;
+}
+
+.board .row .cell:first-of-type {
+  border-left-width: 6px;
+}
+
+.board .row .cell:last-of-type {
+  border-right-width: 6px;
+}
+
+#info h3 {
+  color: chartreuse;
+}
+
+#secondary_info h3 {
+  color: aqua;
 }
