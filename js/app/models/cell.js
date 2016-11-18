@@ -15,7 +15,7 @@ var Cell = function(x, y) {
 Cell.prototype = Object.create(BaseElement.prototype);
 
 Cell.prototype.link = function(unit) {
-  this.unit = unit;
+  this.unit = unit; // this = cell
   unit.cell = this;
 };
 
@@ -24,8 +24,8 @@ Cell.prototype.unlink = function() {
   delete this.unit;
 };
 
-Cell.prototype.place = function(unit) {
-  this.link(unit);
+Cell.prototype.place = function(unit) { // unit = new Unit(name)
+  this.link(unit); // binds unit to a cell. cell is then occupied
   this.$el.append(unit.render());
   return unit;
 };

@@ -1,4 +1,5 @@
 var BaseElement = function() {
+  this.type = 'base';
 };
 
 BaseElement.prototype.render = function() {

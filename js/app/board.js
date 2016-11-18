@@ -68,7 +68,7 @@ Board.prototype.startGame = function() {
 
   board.$el.on('click', '.unit', function (e) {
     e.stopPropagation();
-    _info.display(board.selectUnit($(this)));
+    _info.display(board.selectUnit($(this))); // $(this) = selected unit (jQuery set)
   });
 
   board.$el.on('mouseenter', '.unit', function (e) {
